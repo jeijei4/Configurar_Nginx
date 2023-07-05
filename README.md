@@ -28,26 +28,27 @@ slowlog = /var/log/php-fpm/www-slow.log
 server {
     listen       443 ssl http2;
     listen       [::]:443 ssl http2;
-    server_name _;
-    root        /var/www/html/{proyecto}/public;
-    index       index.php index.html index.htm;
 
+    server_name myapp.example.com;
+    root       "/var/www/html/{proyecto}/public";
     ssl_certificate "/path/to/ssl/certificate.crt";
     ssl_certificate_key "/path/to/ssl/certificate.key";
+
     ssl_session_cache shared:SSL:1m;
     ssl_session_timeout  10m;
     ssl_ciphers PROFILE=SYSTEM;
     ssl_prefer_server_ciphers on;
+    index index.php index.html;
 
     location / {
         try_files $uri $uri/ /index.php;
     }
 
-    location ~ \.php {
+    location ~ \.php$ {
         fastcgi_pass  unix:/run/php-fpm/www.sock;
-        #fastcgi_pass  127.0.0.1:9000;
-        fastcgi_index /index.php;
+        # fastcgi_pass  127.0.0.1:9000;
 
+        fastcgi_index /index.php;
         include /etc/nginx/fastcgi_params;
         fastcgi_split_path_info       ^(.+\.php)(/.+)$;
         fastcgi_param PATH_INFO       $fastcgi_path_info;
@@ -68,4 +69,6 @@ echo $uri;
 ```
 
 ## Créditos
-Como usar <a href="https://github.com/KumbiaPHP/Documentation/blob/master/es/to-install.md#configurar-nginx"><code>KumbiaPHP</code> con nginx</a>
+<a href="https://github.com/KumbiaPHP/Documentation/blob/master/es/to-install.md#configurar-nginx"><code>KumbiaPHP</code></a>
+
+<a href="https://computingforgeeks.com/install-php-8-on-rocky-linux-almalinux-8/"><code>Computingforgeeks</code></a>
