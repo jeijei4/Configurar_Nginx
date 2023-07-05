@@ -69,6 +69,5 @@ echo $uri;
 ```
 
 ## Créditos
-<a href="https://github.com/KumbiaPHP/Documentation/blob/master/es/to-install.md#configurar-nginx"><code>KumbiaPHP</code></a>
-
-<a href="https://computingforgeeks.com/install-php-8-on-rocky-linux-almalinux-8/"><code>Computingforgeeks</code></a>
+[<code>KumbiaPHP</code>](https://github.com/KumbiaPHP/Documentation/blob/master/es/to-install.md#configurar-nginx)
+[<code>Computingforgeeks</code>](https://computingforgeeks.com/install-php-8-on-rocky-linux-almalinux-8/?expand_article=1)
