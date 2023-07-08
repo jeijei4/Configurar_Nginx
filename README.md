@@ -69,5 +69,8 @@ echo $uri;
 ```
 
 ## Créditos
+[<code>Nextcloud</code>](https://docs.nextcloud.com/server/latest/admin_manual/installation/nginx.html#nextcloud-in-the-webroot-of-nginx)
+[<code>Mozilla</code>](https://ssl-config.mozilla.org/#server=nginx&version=1.20.1&config=modern&openssl=3.0.7&guideline=5.7)
 [<code>KumbiaPHP</code>](https://github.com/KumbiaPHP/Documentation/blob/master/es/to-install.md#configurar-nginx)
 [<code>Computingforgeeks</code>](https://computingforgeeks.com/install-php-8-on-rocky-linux-almalinux-8/?expand_article=1)
+
